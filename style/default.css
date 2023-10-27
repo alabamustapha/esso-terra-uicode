@@ -56,6 +56,10 @@ h6 {
   @apply text-sm leading-[1.5rem] font-medium;
 }
 
+.description {
+  @apply text-primary-400 text-sm pt-1;
+}
+
 /* Components */
 .btn {
   @apply inline-flex items-center justify-center text-sm font-medium rounded transition-all disabled:opacity-40;
