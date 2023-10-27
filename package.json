@@ -1,0 +1,17 @@
+{
+  "name": "esso-terra-uicode",
+  "version": "1.0.0",
+  "description": "esso-terra-uicode-cms website",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./style/default.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./style/default.css -o ./dist/output.css --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
+  }
+}

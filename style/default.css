@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply text-base text-grey-300 font-roboto;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold text-grey-400;
+}
+
+h1 {
+  @apply text-4xl leading-[3.4rem];
+}
+
+h2 {
+  @apply text-[2rem] leading-[3rem];
+}
+
+h3 {
+  @apply text-xl leading-[2.7rem];
+}
+
+h4 {
+  @apply text-[1.625rem] leading-[2.4rem];
+}
+
+h5 {
+  @apply text-[1.4rem] leading-[2rem];
+}
+
+h6 {
+  @apply text-xl leading-[1.875rem];
+}
+
+.subtitle-1 {
+  @apply text-base leading-[1.5rem] font-medium;
+}
+
+.subtitle-2 {
+  @apply text-sm leading-[1.5rem] font-medium;
+}
+
+/* Components */
+.btn {
+  @apply inline-flex items-center justify-center text-sm font-medium rounded transition-all disabled:opacity-40;
+}
+
+.btn-md {
+  @apply w-full h-[2.8125rem] p-3;
+}
+
+.btn-lg {
+  @apply w-full h-[3.3125rem] px-4 py-5;
+}
+
+.btn-primary {
+  @apply bg-primary-600 text-[#FFFFFF] hover:bg-primary-700 active:bg-primary-800 disabled:bg-primary-100;
+}
+
+.btn-primary--outline {
+  @apply bg-[#FFFFFF] border border-primary-600 text-primary-600 hover:bg-primary-100 active:border-2 disabled:bg-primary-100 disabled:border-primary-200 disabled:text-primary-200;
+}
+
+.btn-secondary {
+  @apply bg-secondary-600 text-[#FFFFFF] hover:bg-secondary-700 active:bg-secondary-800 disabled:bg-secondary-100;
+}
