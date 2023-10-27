@@ -16,10 +16,10 @@
     <link rel="stylesheet" type="text/css" href="../dist/output.css" />
   </head>
   <body>
-    <div class="dashboard min-h-screen">
-      <div class="h-full w-full flex flex-col items-center justify-center">
+    <div class="dashboard">
+      <div class="dashboard__container">
         <!-- dashboard header -->
-        <div class="w-full flex justify-end items-center pb-4">
+        <div class="dashboard__header justify-end">
           <button class="inline-flex items-center gap-4">
             <svg
               width="24"
@@ -55,7 +55,7 @@
           </button>
         </div>
 
-        <a href="index.html">
+        <a href="index.html" class="logo">
           <img
             src="../images/logo.png"
             alt="logo"
@@ -64,18 +64,16 @@
           />
         </a>
 
-        <div
-          class="max-w-[31.44rem] w-full mt-12 px-20 py-14 border border-grey-100 rounded"
-        >
+        <div class="dashboard__content">
           <div class="text-center pb-6">
-            <h4 class="text-primary-600">Login to your account</h4>
+            <h4>Login to your account</h4>
             <p class="text-primary-400 text-sm pt-1">
               Please enter your staff email and password.
             </p>
           </div>
           <form action="" class="w-full max-w-[21.44rem]">
             <div class="group_input_col">
-              <div class="input-form icon-left">
+              <div class="input-form icon-input">
                 <label for="email">Staff email</label>
                 <input
                   type="text"
@@ -117,7 +115,7 @@
                 </i>
                 <div class="error_message">Email not found in records!</div>
               </div>
-              <div class="input-form icon-left">
+              <div class="input-form icon-input">
                 <label for="password">Password</label>
                 <input
                   type="password"
