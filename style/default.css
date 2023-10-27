@@ -7,8 +7,12 @@ html {
 }
 
 body {
-  @apply text-base text-grey-300 font-roboto;
+  @apply text-base text-grey-300 font-roboto font-normal;
   text-rendering: optimizeLegibility;
+}
+
+img {
+  @apply block max-w-full;
 }
 
 h1,
@@ -52,6 +56,10 @@ h6 {
   @apply text-sm leading-[1.5rem] font-medium;
 }
 
+.dashboard {
+  @apply w-full p-5 md:p-10 bg-[#FFFFFF];
+}
+
 /* Components */
 .btn {
   @apply inline-flex items-center justify-center text-sm font-medium rounded transition-all disabled:opacity-40;
@@ -75,4 +83,70 @@ h6 {
 
 .btn-secondary {
   @apply bg-secondary-600 text-[#FFFFFF] hover:bg-secondary-700 active:bg-secondary-800 disabled:bg-secondary-100;
+}
+
+input,
+select {
+  @apply h-[3.3125rem] text-primary-600 p-4 border border-primary-100 rounded outline-none placeholder:text-primary-300  focus:border-primary-500 focus:placeholder:text-primary-600;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: rgb(1 143 61) !important;
+}
+
+label {
+  @apply text-primary-500 text-xs font-normal cursor-pointer;
+}
+
+.group_input_col {
+  @apply flex flex-col gap-y-6 mb-6;
+}
+
+.input-form {
+  @apply relative flex flex-col gap-1;
+}
+
+.input-form.icon-left input {
+  @apply pr-9;
+}
+
+.input-form .icon {
+  @apply cursor-pointer;
+}
+
+.input-form.icon-left .icon {
+  @apply absolute top-9 right-3;
+}
+
+.input-form.icon-left.invalid .icon svg path {
+  @apply fill-error-400 stroke-none;
+}
+
+.input-form.invalid > .error_message {
+  @apply block;
+}
+
+.error_message {
+  @apply hidden text-sm text-error-400 mt-1;
+}
+
+.input-form.invalid label,
+.input-form.invalid input {
+  @apply text-error-400 border-error-400;
+}
+
+.input-form.invalid input::placeholder {
+  @apply text-error-200;
+}
+
+.input_desc p {
+  @apply text-sm text-secondary-500;
+}
+
+.input_desc ul {
+  @apply text-xs text-secondary-400;
+}
+
+.lead {
+  @apply block text-center text-sm font-normal text-primary-400;
 }
