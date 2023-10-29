@@ -12,7 +12,7 @@ body {
 }
 
 img {
-  @apply block max-w-full;
+  @apply inline-block max-w-full;
 }
 
 h1,
@@ -46,6 +46,10 @@ h5 {
 
 h6 {
   @apply text-xl leading-[1.875rem];
+}
+
+ul {
+  @apply list-none;
 }
 
 .subtitle-1 {
@@ -147,6 +151,10 @@ label {
   @apply block text-center text-sm font-normal text-primary-400;
 }
 
+.scrollbar {
+  @apply scrollbar-thumb-primary-600 scrollbar-thin scrollbar-track-white;
+}
+
 /* Modal */
 .modal {
   @apply hidden fixed top-0 left-0 right-0 z-50 flex-col justify-center items-center bg-grey-400/80 p-4 overflow-hidden min-h-screen backdrop-blur-sm;
@@ -166,11 +174,15 @@ label {
 
 /* Dashboard */
 .dashboard {
-  @apply w-full min-h-screen p-5 md:p-10 bg-white;
+  @apply w-full min-h-screen  p-5 bg-white;
 }
 
 .dashboard__container {
   @apply h-full w-full flex flex-col items-center justify-center;
+}
+
+.dashboard__app {
+  @apply flex gap-6 w-full h-screen p-5 bg-grey-100 overflow-hidden;
 }
 
 .dashboard__header {
@@ -178,9 +190,136 @@ label {
 }
 
 .logo img {
-  @apply h-[6rem] object-contain;
+  @apply h-[6rem] object-cover;
 }
 
 .dashboard__content {
   @apply max-w-[31.44rem] w-full mt-10 px-20 py-14 border border-grey-100 rounded;
+}
+
+/* Sidebar */
+.sidebar {
+  @apply hidden md:flex flex-col min-w-full md:min-w-[21.48rem] p-10 bg-white rounded overflow-hidden;
+}
+
+.sidebar__content {
+  @apply overflow-y-auto  pr-1 py-2;
+}
+
+.menu__list,
+.sidebar__actions {
+  @apply flex flex-col gap-3 text-sm font-medium;
+}
+
+.menu__list {
+  @apply mb-14;
+}
+
+.menu__nav {
+  @apply flex items-center gap-3 h-[3.3125rem] px-5 py-4 rounded bg-white text-primary-600 cursor-pointer hover:text-white hover:bg-primary-600 transition-all;
+}
+
+.menu__nav.active {
+  @apply bg-primary-600 text-white;
+}
+
+.menu__nav:hover i > svg > path,
+.menu__nav.active i > svg > path {
+  @apply stroke-white;
+}
+
+.menu__nav > i:nth-child(3) > svg:nth-child(1),
+.menu__nav.active > i:nth-child(3) > svg:nth-child(2) {
+  @apply block;
+}
+
+.menu__nav > i:nth-child(3) > svg:nth-child(2),
+.menu__nav.active > i:nth-child(3) > svg:nth-child(1) {
+  @apply hidden;
+}
+
+.menu__sublist {
+  @apply hidden flex-col max-w-[12.5rem] w-full ml-auto;
+}
+
+.menu__nav.active + .menu__sublist {
+  @apply flex;
+}
+
+.menu__subnav {
+  @apply px-5 py-2 cursor-pointer;
+}
+
+.menu__subitems {
+  @apply flex items-center justify-between;
+}
+
+.menu__subitems.active i > svg:nth-child(1),
+.menu__subitems i > svg:nth-child(2) {
+  @apply hidden;
+}
+
+.menu__subitems.active i > svg:nth-child(2),
+.menu__subitems i > svg:nth-child(1) {
+  @apply block;
+}
+
+.menu__subnav__items {
+  @apply hidden flex-col items-center list-outside list-disc marker:text-primary-600 min-w-[5.625rem] w-full;
+}
+.menu__subitems.active + .menu__subnav__items {
+  @apply flex;
+}
+
+.menu__subnav__items li {
+  @apply py-1 hover:text-secondary-600 active:text-secondary-600 transition-all;
+}
+
+.menu__subnav__items li.active {
+  @apply text-secondary-600;
+}
+
+/* contents */
+.content {
+  @apply w-full h-full overflow-y-auto py-2;
+}
+
+.content__header {
+  @apply max-h-[3.7rem];
+}
+
+.action {
+  @apply flex items-center justify-between;
+}
+
+.notification {
+  @apply relative flex justify-center items-center ml-auto mr-8 w-11 h-11 rounded bg-white;
+}
+
+.notification.active {
+  @apply after:content-[''] after:absolute after:h-2 after:w-2 after:rounded-full after:bg-error-400 after:top-3 after:right-3;
+}
+
+.user {
+  @apply flex items-center gap-4;
+}
+
+.user__image {
+  @apply w-[2.75rem] h-[2.75rem] rounded-full overflow-hidden;
+}
+
+.user__image img {
+  @apply block w-full h-full object-cover;
+}
+
+.user__details {
+  @apply font-medium leading-6;
+}
+
+.user__details h6 {
+  @apply text-grey-400 text-base;
+}
+
+.user__details p {
+  @apply text-grey-200 text-base;
 }
