@@ -1411,16 +1411,15 @@ label {
 }
 
 .user__image {
-  height: 2.75rem;
-  width: 2.75rem;
-  overflow: hidden;
-  border-radius: 9999px;
+  height: 3rem;
+  width: 3rem;
 }
 
 .user__image img {
   display: block;
   height: 100%;
   width: 100%;
+  border-radius: 9999px;
   -o-object-fit: cover;
      object-fit: cover;
 }

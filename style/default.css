@@ -305,11 +305,11 @@ label {
 }
 
 .user__image {
-  @apply w-[2.75rem] h-[2.75rem] rounded-full overflow-hidden;
+  @apply w-[3rem] h-[3rem];
 }
 
 .user__image img {
-  @apply block w-full h-full object-cover;
+  @apply block w-full h-full object-cover rounded-full;
 }
 
 .user__details {
