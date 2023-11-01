@@ -1129,7 +1129,11 @@ label {
 
 .card {
   border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(184 184 184 / var(--tw-text-opacity));
 }
 
 .card__wrapper {
@@ -1180,13 +1184,6 @@ label {
   font-weight: 400;
 }
 
-.card--white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(184 184 184 / var(--tw-text-opacity));
-}
-
 .card--md {
   min-height: 12.5625rem;
   width: 100%;
@@ -1197,6 +1194,30 @@ label {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+}
+
+.card__detail > .description {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(114 114 114 / var(--tw-text-opacity));
+}
+
+.card__detail > .timeline {
+  height: 1.625rem;
+  width: 100%;
+  max-width: 7.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 223 205 / var(--tw-bg-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(209 81 6 / var(--tw-text-opacity));
 }
 
 .company__card img {

@@ -170,7 +170,7 @@ label {
 
 /* Card */
 .card {
-  @apply rounded-lg p-6;
+  @apply rounded-lg p-6 bg-white text-grey-200;
 }
 
 .card__wrapper {
@@ -189,16 +189,20 @@ label {
   @apply text-xs font-normal;
 }
 
-.card--white {
-  @apply bg-white text-grey-200;
-}
-
 .card--md {
   @apply w-full max-w-[20.5rem] min-h-[12.5625rem];
 }
 
 .card__detail {
   @apply flex flex-col gap-1;
+}
+
+.card__detail > .description {
+  @apply text-grey-300 my-3;
+}
+
+.card__detail > .timeline {
+  @apply w-full max-w-[7.5rem] h-[1.625rem] bg-secondary-100 text-secondary-700 text-xs font-normal px-3 py-1;
 }
 
 .company__card img {
