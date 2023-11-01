@@ -21,19 +21,19 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-bold text-grey-400 text-primary-600;
+  @apply text-primary-600;
 }
 
 h1 {
-  @apply text-4xl leading-[3.4rem];
+  @apply text-4xl leading-[3.4rem] font-bold;
 }
 
 h2 {
-  @apply text-[2rem] leading-[3rem];
+  @apply text-[2rem] leading-[3rem] font-bold;
 }
 
 h3 {
-  @apply text-xl leading-[2.7rem];
+  @apply text-xl leading-[2.7rem] font-bold;
 }
 
 h4 {
@@ -45,7 +45,7 @@ h5 {
 }
 
 h6 {
-  @apply text-xl leading-[1.875rem];
+  @apply text-xl leading-[1.875rem] font-medium;
 }
 
 ul {
@@ -152,7 +152,57 @@ label {
 }
 
 .scrollbar {
-  @apply scrollbar-thumb-primary-600 scrollbar-thin scrollbar-track-white;
+  @apply scrollbar-thumb-primary-600 scrollbar-thin scrollbar-track-white pr-1;
+}
+
+/* Tabs */
+.tab__navs {
+  @apply flex items-center gap-2;
+}
+
+.tab__link {
+  @apply text-primary-300 text-xl font-medium after:content-['>'] after:ml-2 after:inline-block;
+}
+
+.tab__link.active {
+  @apply text-primary-600 text-[2rem] leading-[3rem] font-semibold after:hidden;
+}
+
+/* Card */
+.card {
+  @apply rounded-lg p-6;
+}
+
+.card__wrapper {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:max-lg:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 overflow-y-auto;
+}
+
+.card .title {
+  @apply text-grey-400;
+}
+
+.card .type {
+  @apply text-sm font-medium;
+}
+
+.card .number {
+  @apply text-xs font-normal;
+}
+
+.card--white {
+  @apply bg-white text-grey-200;
+}
+
+.card--md {
+  @apply w-full max-w-[20.5rem] min-h-[12.5625rem];
+}
+
+.card__detail {
+  @apply flex flex-col gap-1;
+}
+
+.company__card img {
+  @apply w-16 h-16 rounded object-cover;
 }
 
 /* Modal */
@@ -203,7 +253,7 @@ label {
 }
 
 .sidebar__content {
-  @apply overflow-y-auto  pr-1 py-2;
+  @apply overflow-y-auto py-2;
 }
 
 .menu__list,
@@ -281,15 +331,19 @@ label {
 
 /* contents */
 .content {
-  @apply w-full h-full overflow-y-auto py-2;
+  @apply flex flex-col w-full h-full py-2;
 }
 
 .content__header {
-  @apply max-h-[3.7rem];
+  @apply flex items-center max-h-[3.7rem];
+}
+
+.content__wrapper {
+  @apply mt-8 overflow-y-auto h-full;
 }
 
 .action {
-  @apply flex items-center justify-between;
+  @apply flex items-center justify-between ml-auto;
 }
 
 .notification {
