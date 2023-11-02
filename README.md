@@ -3,7 +3,7 @@
 ![Input Field](images_states/input_default_state.jpg)
 
 ```html
-<div class="input-form icon-input">....</div>
+<div class="input-container">...</div>
 ```
 
 ## Invalid Input State
@@ -11,7 +11,7 @@
 ![Invalid Input Field](images_states/input_invalid_state.jpg)
 
 ```html
-<div class="input-form icon-input invalid">....</div>
+<div class="input-container invalid">...</div>
 ```
 
 ## Nav default state
