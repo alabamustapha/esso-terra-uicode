@@ -217,6 +217,26 @@ label {
   @apply w-16 h-16 rounded object-cover;
 }
 
+/* Folder */
+.folders__wrapper {
+  @apply mt-5 flex flex-wrap gap-5 xl:w-[90%];
+}
+
+.folder__card {
+  @apply flex justify-between w-[21.4375rem] h-[7.5rem] py-4 pr-3 pl-6 bg-white rounded;
+}
+
+.folder__content > p {
+  @apply text-base font-medium text-grey-400;
+}
+
+.folder__content {
+  @apply flex items-center gap-7;
+}
+
+.folder__icon {
+  @apply inline-flex items-center justify-between w-[4.5rem] h-[4.5rem] bg-primary-100 rounded-xl p-3;
+}
 /* Modal */
 .modal {
   @apply hidden fixed top-0 left-0 right-0 z-50 flex-col justify-center items-center bg-grey-400/80 p-4 overflow-hidden min-h-screen backdrop-blur-sm;
