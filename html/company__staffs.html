@@ -183,10 +183,10 @@
 
                   <ul class="menu__sublist__link">
                     <li>
-                      <a href="" class="link active"> Company Info </a>
+                      <a href="" class="link"> Company Info </a>
                     </li>
                     <li>
-                      <a href="" class="link"> Staffs </a>
+                      <a href="" class="link active"> Staffs </a>
                     </li>
                   </ul>
                 </li>
@@ -683,241 +683,110 @@
               <span class="tab__link" data-target="company">Company</span>
             </li>
             <li>
-              <span class="tab__link active" data-target="company_info"
-                >Company Info</span
-              >
+              <span class="tab__link active" data-target="staffs">Staffs</span>
             </li>
           </ul>
         </div>
 
-        <div class="content__wrapper scrollbar">
-          <div class="company__info">
-            <div class="company__logo">
-              <div class="logo">
-                <img src="../images/dashboard/company.png" alt="logo" />
-              </div>
-              <button class="btn btn-primary btn-md !w-fit">
-                <svg
-                  width="16"
-                  height="17"
-                  viewBox="0 0 16 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+        <div class="content__wrapper">
+          <div class="company__staffs grid grid-cols-1">
+            <div class="overflow-auto scrollbar">
+              <table
+                class="w-[53rem] text-sm text-left text-grey-300 font-medium"
+              >
+                <thead
+                  class="text-base capitalize text-primary-500 bg-primary-100 h-12 border-collapse"
                 >
-                  <path
-                    d="M6 7.83325V11.8333L7.33333 10.4999"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5.99935 11.8333L4.66602 10.5"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M14.6673 7.16659V10.4999C14.6673 13.8333 13.334 15.1666 10.0007 15.1666H6.00065C2.66732 15.1666 1.33398 13.8333 1.33398 10.4999V6.49992C1.33398 3.16659 2.66732 1.83325 6.00065 1.83325H9.33398"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M14.6673 7.16658H12.0007C10.0007 7.16658 9.33398 6.49992 9.33398 4.49992V1.83325L14.6673 7.16658Z"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-
-                <span>Download Company Logo</span>
-              </button>
-            </div>
-            <div class="company__details">
-              <form action="">
-                <div class="flex gap-7 flex-wrap lg:flex-nowrap">
-                  <div class="group_input_col w-full lg:max-w-[21.4375rem]">
-                    <div class="input-container">
-                      <label for="company_name"> Company Name </label>
-                      <input
-                        type="text"
-                        name="company_name"
-                        id="company_name"
-                        value="Company Name"
-                        readonly
+                  <tr>
+                    <th></th>
+                    <th class="px-6 py-3">Staffs Name</th>
+                    <th class="px-6 py-3">Role</th>
+                    <th class="px-6 py-3">Email</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="bg-white h-[2.8rem] border-y-[15px] border-grey-100"
+                  >
+                    <td class="text-center bg-grey-100">
+                      <img
+                        src="../images/dashboard/avatar.png"
+                        alt="image"
+                        class="w-[2rem] h-[2rem] rounded-full object-cover"
                       />
-                    </div>
-                    <div class="input-container">
-                      <label for="company_type"> Company Type </label>
-                      <input
-                        type="text"
-                        name="company_type"
-                        id="company_type"
-                        value="Company Type"
-                        readonly
+                    </td>
+                    <td class="px-6 py-3 rounded-l">Frist Name Last Name</td>
+                    <td class="px-6 py-3">Staffs</td>
+                    <td class="px-6 py-3 flex justify-between">
+                      <span>Staff@ET.com</span>
+                      <button>
+                        <svg
+                          width="20"
+                          height="21"
+                          viewBox="0 0 20 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
+                            stroke="#727272"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
+                            stroke="#727272"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white h-[2.8rem] border-y-[15px] border-grey-100"
+                  >
+                    <td class="text-center bg-grey-100">
+                      <img
+                        src="../images/dashboard/avatar.png"
+                        alt="image"
+                        class="w-[2rem] h-[2rem] rounded-full object-cover"
                       />
-                    </div>
-                    <div class="input-container">
-                      <label for="reg_number">
-                        Company Registration Number
-                      </label>
-                      <div class="input-with-icon">
-                        <i class="icon">
-                          <svg
-                            width="20"
-                            height="21"
-                            viewBox="0 0 20 21"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
-                              stroke="#2BA25D"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
-                              stroke="#2BA25D"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </i>
-                        <input
-                          type="text"
-                          name="reg_number"
-                          id="reg_number"
-                          value="00000"
-                          readonly
-                        />
-                      </div>
-                    </div>
-                    <div class="input-container">
-                      <label for="company_email"> Company Email </label>
-                      <div class="input-with-icon">
-                        <i class="icon">
-                          <svg
-                            width="20"
-                            height="21"
-                            viewBox="0 0 20 21"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
-                              stroke="#2BA25D"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
-                              stroke="#2BA25D"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </i>
-                        <input
-                          type="email"
-                          name="company_email"
-                          id="company_email"
-                          value="CompanyName@company.com"
-                          readonly
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="group_input_col w-full lg:max-w-[43.625rem]">
-                    <div class="input-container">
-                      <label for="company_desc"> Company Description </label>
-                      <textarea readonly class="scrollbar" rows="5">
-Company Description</textarea
-                      >
-                    </div>
-                    <div class="input-container">
-                      <label for="company_address"> Company Address </label>
-                      <div class="input-with-icon">
-                        <i class="icon">
-                          <svg
-                            width="20"
-                            height="21"
-                            viewBox="0 0 20 21"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
-                              stroke="#2BA25D"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
-                              stroke="#2BA25D"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </i>
-                        <input
-                          type="text"
-                          name="company_address"
-                          id="company_address"
-                          value="Company Address"
-                          readonly
-                        />
-                      </div>
-                    </div>
-                    <div class="input-container">
-                      <label for="company_phone"> Company Phone </label>
-                      <div class="input-with-icon">
-                        <i class="icon">
-                          <svg
-                            width="20"
-                            height="21"
-                            viewBox="0 0 20 21"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
-                              stroke="#2BA25D"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
-                              stroke="#2BA25D"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </i>
-                        <input
-                          type="text"
-                          name="company_phone"
-                          id="company_phone"
-                          value="000-000-000"
-                          readonly
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
+                    </td>
+                    <td class="px-6 py-3 rounded-l">Frist Name Last Name</td>
+                    <td class="px-6 py-3">Staffs</td>
+                    <td class="px-6 py-3 flex justify-between">
+                      <span>Staff@ET.com</span>
+                      <button>
+                        <svg
+                          width="20"
+                          height="21"
+                          viewBox="0 0 20 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
+                            stroke="#727272"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
+                            stroke="#727272"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
