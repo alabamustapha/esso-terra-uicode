@@ -575,10 +575,6 @@ video {
   display: inline-flex;
 }
 
-.h-\[4\.5rem\] {
-  height: 4.5rem;
-}
-
 .h-\[5\.9rem\] {
   height: 5.9rem;
 }
@@ -587,16 +583,9 @@ video {
   height: 5rem;
 }
 
-.h-\[7\.5rem\] {
-  height: 7.5rem;
-}
-
-.w-\[21\.4375rem\] {
-  width: 21.4375rem;
-}
-
-.w-\[4\.5rem\] {
-  width: 4.5rem;
+.\!w-fit {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
 }
 
 .w-full {
@@ -617,6 +606,10 @@ video {
 
 .basis-\[27\.75rem\] {
   flex-basis: 27.75rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-start {
@@ -653,47 +646,12 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
-.bg-primary-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 233 216 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.p-3 {
-  padding: 0.75rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .pb-6 {
   padding-bottom: 1.5rem;
 }
 
 .pb-8 {
   padding-bottom: 2rem;
-}
-
-.pl-6 {
-  padding-left: 1.5rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
 }
 
 .text-left {
@@ -990,6 +948,15 @@ form {
 input,
 select {
   height: 3.3125rem;
+}
+
+textarea {
+  resize: none;
+}
+
+input,
+select,
+textarea {
   width: 100%;
   border-radius: 0.25rem;
   border-width: 1px;
@@ -1002,30 +969,53 @@ select {
   outline-offset: 2px;
 }
 
-input::-moz-placeholder, select::-moz-placeholder {
+input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(128 199 158 / var(--tw-text-opacity));
 }
 
 input::placeholder,
-select::placeholder {
+select::placeholder,
+textarea::placeholder {
   --tw-text-opacity: 1;
   color: rgb(128 199 158 / var(--tw-text-opacity));
 }
 
+input:-moz-read-only, select:-moz-read-only, textarea:-moz-read-only {
+  --tw-border-opacity: 1;
+  border-color: rgb(86 180 126 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 233 216 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(43 162 93 / var(--tw-text-opacity));
+}
+
+input:read-only,
+select:read-only,
+textarea:read-only {
+  --tw-border-opacity: 1;
+  border-color: rgb(86 180 126 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 233 216 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(43 162 93 / var(--tw-text-opacity));
+}
+
 input:focus,
-select:focus {
+select:focus,
+textarea:focus {
   --tw-border-opacity: 1;
   border-color: rgb(43 162 93 / var(--tw-border-opacity));
 }
 
-input:focus::-moz-placeholder, select:focus::-moz-placeholder {
+input:focus::-moz-placeholder, select:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(1 143 61 / var(--tw-text-opacity));
 }
 
 input:focus::placeholder,
-select:focus::placeholder {
+select:focus::placeholder,
+textarea:focus::placeholder {
   --tw-text-opacity: 1;
   color: rgb(1 143 61 / var(--tw-text-opacity));
 }
@@ -1526,12 +1516,13 @@ label {
 
 .menu__list {
   margin-bottom: 3.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(1 143 61 / var(--tw-text-opacity));
 }
 
 .menu__nav {
   display: flex;
   height: 3.3125rem;
-  cursor: pointer;
   align-items: center;
   gap: 0.75rem;
   border-radius: 0.25rem;
@@ -1541,8 +1532,6 @@ label {
   padding-right: 1.25rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  --tw-text-opacity: 1;
-  color: rgb(1 143 61 / var(--tw-text-opacity));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -1581,7 +1570,7 @@ label {
   margin-left: auto;
   display: none;
   width: 100%;
-  max-width: 12.5rem;
+  max-width: 13.5rem;
   flex-direction: column;
 }
 
@@ -1590,11 +1579,27 @@ label {
 }
 
 .menu__subnav {
-  cursor: pointer;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.menu__subitems.active + ul {
+  display: flex;
+}
+
+.menu__subitems.active + ul .menu__subitems.active {
+  --tw-text-opacity: 1;
+  color: rgb(251 97 7 / var(--tw-text-opacity));
+}
+
+.menu__subitems.active + ul .menu__subitems.active i > svg > path {
+  stroke: #FB6107;
+}
+
+.menu__subitems.active + ul li {
+  padding-right: 0px;
 }
 
 .menu__subitems {
@@ -1613,52 +1618,32 @@ label {
   display: block;
 }
 
-.menu__subnav__items {
+.menu__sublist__link {
   display: none;
-  width: 100%;
-  min-width: 5.625rem;
   list-style-position: outside;
   list-style-type: disc;
   flex-direction: column;
-  align-items: center;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
 }
 
-.menu__subnav__items *::marker {
+.menu__sublist__link *::marker {
   color: rgb(1 143 61 );
 }
 
-.menu__subnav__items::marker {
+.menu__sublist__link::marker {
   color: rgb(1 143 61 );
 }
 
-.menu__subitems.active + .menu__subnav__items {
-  display: flex;
-}
-
-.menu__subnav__items li {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.menu__subnav__items li:hover {
+.menu__sublist__link .link.active,
+.menu__sublist__link .link:hover {
   --tw-text-opacity: 1;
   color: rgb(251 97 7 / var(--tw-text-opacity));
 }
 
-.menu__subnav__items li:active {
-  --tw-text-opacity: 1;
-  color: rgb(251 97 7 / var(--tw-text-opacity));
-}
-
-.menu__subnav__items li.active {
-  --tw-text-opacity: 1;
-  color: rgb(251 97 7 / var(--tw-text-opacity));
-}
-
-/* contents */
+/* Contents */
 
 .content {
   display: flex;
@@ -1752,4 +1737,51 @@ label {
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(184 184 184 / var(--tw-text-opacity));
+}
+
+/* Company Info */
+
+.company__details {
+  width: 100%;
+  max-width: 70rem;
+}
+
+.company__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.company__logo {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.company__logo > .logo {
+  height: 9.1875rem;
+  width: 9.1875rem;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.company__logo > .logo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .lg\:max-w-\[21\.4375rem\] {
+    max-width: 21.4375rem;
+  }
+
+  .lg\:max-w-\[43\.625rem\] {
+    max-width: 43.625rem;
+  }
+
+  .lg\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
 }

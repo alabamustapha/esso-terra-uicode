@@ -95,7 +95,17 @@ form {
 
 input,
 select {
-  @apply w-full h-[3.3125rem] text-primary-600 p-4 border border-primary-100 rounded outline-none placeholder:text-primary-300  focus:border-primary-500 focus:placeholder:text-primary-600;
+  @apply h-[3.3125rem];
+}
+
+textarea {
+  @apply resize-none;
+}
+
+input,
+select,
+textarea {
+  @apply w-full  text-primary-600 p-4 border border-primary-100 rounded outline-none placeholder:text-primary-300  focus:border-primary-500 focus:placeholder:text-primary-600 read-only:text-primary-500 read-only:bg-primary-100 read-only:border-primary-400;
 }
 
 input:-webkit-autofill {
@@ -294,11 +304,11 @@ label {
 }
 
 .menu__list {
-  @apply mb-14;
+  @apply mb-14 text-primary-600;
 }
 
 .menu__nav {
-  @apply flex items-center gap-3 h-[3.3125rem] px-5 py-4 rounded bg-white text-primary-600 cursor-pointer hover:text-white hover:bg-primary-600 transition-all;
+  @apply flex items-center gap-3 h-[3.3125rem] px-5 py-4 rounded bg-white hover:text-white hover:bg-primary-600 transition-all;
 }
 
 .menu__nav.active {
@@ -321,7 +331,7 @@ label {
 }
 
 .menu__sublist {
-  @apply hidden flex-col max-w-[12.5rem] w-full ml-auto;
+  @apply hidden flex-col max-w-[13.5rem] w-full ml-auto;
 }
 
 .menu__nav.active + .menu__sublist {
@@ -329,7 +339,23 @@ label {
 }
 
 .menu__subnav {
-  @apply px-5 py-2 cursor-pointer;
+  @apply px-5 py-2;
+}
+
+.menu__subitems.active + ul {
+  @apply flex;
+}
+
+.menu__subitems.active + ul .menu__subitems.active {
+  @apply text-secondary-600;
+}
+
+.menu__subitems.active + ul .menu__subitems.active i > svg > path {
+  @apply stroke-secondary-600;
+}
+
+.menu__subitems.active + ul li {
+  @apply pr-0;
 }
 
 .menu__subitems {
@@ -346,22 +372,16 @@ label {
   @apply block;
 }
 
-.menu__subnav__items {
-  @apply hidden flex-col items-center list-outside list-disc marker:text-primary-600 min-w-[5.625rem] w-full;
-}
-.menu__subitems.active + .menu__subnav__items {
-  @apply flex;
+.menu__sublist__link {
+  @apply hidden pl-8 flex-col gap-1 py-2 list-outside list-disc marker:text-primary-600;
 }
 
-.menu__subnav__items li {
-  @apply py-1 hover:text-secondary-600 active:text-secondary-600 transition-all;
-}
-
-.menu__subnav__items li.active {
+.menu__sublist__link .link.active,
+.menu__sublist__link .link:hover {
   @apply text-secondary-600;
 }
 
-/* contents */
+/* Contents */
 .content {
   @apply flex flex-col w-full h-full py-2;
 }
@@ -408,4 +428,24 @@ label {
 
 .user__details p {
   @apply text-grey-200 text-base;
+}
+
+/* Company Info */
+.company__details {
+  @apply w-full max-w-[70rem];
+}
+.company__info {
+  @apply flex flex-col gap-8;
+}
+
+.company__logo {
+  @apply flex gap-12 items-center;
+}
+
+.company__logo > .logo {
+  @apply w-[9.1875rem] h-[9.1875rem] rounded overflow-hidden;
+}
+
+.company__logo > .logo img {
+  @apply w-full h-full object-cover;
 }
