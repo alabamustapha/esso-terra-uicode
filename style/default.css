@@ -7,7 +7,8 @@ html {
 }
 
 body {
-  @apply text-base text-grey-300 font-roboto font-normal;
+  @apply text-base text-grey-300 font-roboto font-normal
+  scrollbar-thumb-primary-600 scrollbar-thin scrollbar-track-white pr-1;
   text-rendering: optimizeLegibility;
 }
 
@@ -37,7 +38,7 @@ h3 {
 }
 
 h4 {
-  @apply text-[1.625rem] leading-[2.4rem];
+  @apply text-[1.625rem] leading-[2.4rem] font-medium;
 }
 
 h5 {
