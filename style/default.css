@@ -209,7 +209,11 @@ label {
 }
 
 .card--md {
-  @apply w-full max-w-[20.5rem] min-h-[12.5625rem];
+  @apply w-full max-w-[20.5rem] xl:max-w-full min-h-[12.5625rem];
+}
+
+.card--sm {
+  @apply w-[14rem] h-[14rem];
 }
 
 .card__detail {
@@ -245,9 +249,19 @@ label {
   @apply flex items-center gap-7;
 }
 
+.folder__content.content--col {
+  @apply flex-col;
+}
+
 .folder__icon {
   @apply inline-flex items-center justify-between w-[4.5rem] h-[4.5rem] bg-primary-100 rounded-xl p-3;
 }
+
+/* Files */
+.file__card {
+  @apply flex flex-col items-center justify-center relative;
+}
+
 /* Modal */
 .modal {
   @apply hidden fixed top-0 left-0 right-0 z-50 flex-col justify-center items-center bg-grey-400/80 p-4 overflow-hidden min-h-screen backdrop-blur-sm;

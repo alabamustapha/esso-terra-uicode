@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eso-Terra | Company</title>
+    <title>Eso-Terra | Project</title>
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,7 +29,7 @@
         <div class="sidebar__content scrollbar">
           <ul class="menu__list">
             <li>
-              <a href="" class="menu__nav active">
+              <a href="" class="menu__nav">
                 <i
                   ><svg
                     width="20"
@@ -143,7 +143,7 @@
 
               <ul class="menu__sublist">
                 <li class="menu__subnav">
-                  <a href="" class="menu__subitems active">
+                  <a href="" class="menu__subitems">
                     <span>Company Name</span>
                     <i class="ml-auto">
                       <svg
@@ -183,17 +183,17 @@
 
                   <ul class="menu__sublist__link">
                     <li>
-                      <a href="" class="link"> Company Info </a>
+                      <a href="" class="link active"> Company Info </a>
                     </li>
                     <li>
-                      <a href="" class="link active"> Staffs </a>
+                      <a href="" class="link"> Staffs </a>
                     </li>
                   </ul>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="" class="menu__nav">
+              <a href="" class="menu__nav active">
                 <i
                   ><svg
                     width="20"
@@ -257,7 +257,7 @@
 
               <ul class="menu__sublist">
                 <li class="menu__subnav">
-                  <a href="" class="menu__subitems">
+                  <a href="" class="menu__subitems active">
                     <span>Project Name</span>
                     <i class="ml-auto">
                       <svg
@@ -297,10 +297,10 @@
 
                   <ul class="menu__sublist__link">
                     <li>
-                      <a href="" class="link active"> Project Info </a>
+                      <a href="" class="link"> Project Info </a>
                     </li>
                     <li>
-                      <a href="" class="link"> Project Members </a>
+                      <a href="" class="link active"> Project Members </a>
                     </li>
                   </ul>
                 </li>
@@ -680,19 +680,22 @@
         <div class="tab">
           <ul class="tab__navs">
             <li>
-              <span class="tab__link" data-target="company">Company</span>
+              <a href="" class="tab__link" data-target="Project">Project</a>
             </li>
             <li>
-              <span class="tab__link active" data-target="staffs">Staffs</span>
+              <a href="" class="tab__link active" data-target="Project__info"
+                >Project Members</a
+              >
             </li>
           </ul>
         </div>
 
-        <div class="content__wrapper">
-          <div class="company__staffs grid grid-cols-1">
+        <div class="content__wrapper scrollbar">
+          <h6 class="mb-6 text-grey-300">Projects Members</h6>
+          <div class="grid grid-cols-1">
             <div class="overflow-auto scrollbar">
               <table
-                class="min-w-[53rem] w-full text-sm text-left text-grey-300 font-medium"
+                class="w-[53rem] text-sm text-left text-grey-300 font-medium"
               >
                 <thead
                   class="text-base capitalize text-primary-500 bg-primary-100 h-12 border-collapse"

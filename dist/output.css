@@ -539,12 +539,28 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mb-7 {
@@ -607,10 +623,6 @@ video {
   height: 5rem;
 }
 
-.\!h-\[17rem\] {
-  height: 17rem !important;
-}
-
 .\!w-fit {
   width: -moz-fit-content !important;
   width: fit-content !important;
@@ -628,8 +640,8 @@ video {
   width: 100%;
 }
 
-.w-\[21rem\] {
-  width: 21rem;
+.min-w-\[53rem\] {
+  min-width: 53rem;
 }
 
 .max-w-\[21\.44rem\] {
@@ -640,28 +652,12 @@ video {
   max-width: 4.875rem;
 }
 
-.max-w-\[21rem\] {
-  max-width: 21rem;
-}
-
 .basis-\[10\.75rem\] {
   flex-basis: 10.75rem;
 }
 
 .basis-\[27\.75rem\] {
   flex-basis: 27.75rem;
-}
-
-.basis-2\/5 {
-  flex-basis: 40%;
-}
-
-.basis-2\/6 {
-  flex-basis: 33.333333%;
-}
-
-.basis-\[30\%\] {
-  flex-basis: 30%;
 }
 
 .basis-full {
@@ -1476,6 +1472,17 @@ label {
   max-width: 20.5rem;
 }
 
+@media (min-width: 1280px) {
+  .card--md {
+    max-width: 100%;
+  }
+}
+
+.card--sm {
+  height: 14rem;
+  width: 14rem;
+}
+
 .card__detail {
   display: flex;
   flex-direction: column;
@@ -1557,6 +1564,10 @@ label {
   gap: 1.75rem;
 }
 
+.folder__content.content--col {
+  flex-direction: column;
+}
+
 .folder__icon {
   display: inline-flex;
   height: 4.5rem;
@@ -1567,6 +1578,16 @@ label {
   --tw-bg-opacity: 1;
   background-color: rgb(204 233 216 / var(--tw-bg-opacity));
   padding: 0.75rem;
+}
+
+/* Files */
+
+.file__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Modal */
