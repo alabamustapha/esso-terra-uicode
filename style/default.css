@@ -214,7 +214,7 @@ label {
 }
 
 .card--md {
-  @apply w-full max-w-[20.5rem] xl:max-w-full min-h-[12.5625rem];
+  @apply w-full md:max-w-[20.5rem] xl:max-w-full min-h-[12.5625rem];
 }
 
 .card--sm {
@@ -290,7 +290,7 @@ label {
 }
 
 .dashboard__app {
-  @apply flex gap-6 w-full h-screen p-5 bg-grey-100 overflow-hidden;
+  @apply md:grid grid-cols-[21.5rem_1fr] gap-6 w-full h-screen p-5 bg-grey-100 overflow-hidden;
 }
 
 .dashboard__header {
@@ -307,11 +307,11 @@ label {
 
 /* Sidebar */
 .sidebar {
-  @apply hidden md:flex flex-col min-w-full md:min-w-[21.48rem] p-10 bg-white rounded overflow-hidden;
+  @apply hidden md:flex flex-col p-10 bg-white rounded overflow-hidden;
 }
 
 .sidebar__content {
-  @apply overflow-y-auto py-2;
+  @apply overflow-y-auto py-2 md:grid grid-rows-[1fr_2fr];
 }
 
 .menu__list,
@@ -399,7 +399,7 @@ label {
 
 /* Contents */
 .content {
-  @apply flex flex-col w-full h-full py-2;
+  @apply flex flex-col w-full h-full py-2 overflow-hidden;
 }
 
 .content__header {

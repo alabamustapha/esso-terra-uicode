@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sublink</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../../dist/output.css" />
+  </head>
+  <body>
+    <!-- Sub link -->
+    <!-- For default state: [class="list-none px-5 py-2 group/sub"]  -->
+    <!-- For active state: [class="list-none px-5 py-2 group/sub active"]  -->
+
+    <li class="list-none px-5 py-2 group/sub">
+      <a href="" class="flex items-center justify-between">
+        <span>Company Name</span>
+        <i class="ml-auto">
+          <svg
+            class="group-[.active]/sub:hidden"
+            width="9"
+            height="15"
+            viewBox="0 0 9 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.4248 14.2352L6.85814 8.80182C7.49981 8.16016 7.49981 7.11016 6.85814 6.46849L1.4248 1.03516"
+              stroke="#017733"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            class="hidden group-[.active]/sub:inline-block"
+            width="16"
+            height="8"
+            viewBox="0 0 16 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.6004 1.09351L9.16706 6.52684C8.52539 7.16851 7.47539 7.16851 6.83372 6.52684L1.40039 1.09351"
+              stroke="#017733"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </i>
+      </a>
+
+      <!-- Last links -->
+
+      <ul
+        class="hidden group-[.active]/sub:inline-block pl-8 flex-col gap-1 py-2 list-outside list-disc marker:text-primary-600"
+      >
+        .....
+      </ul>
+    </li>
+  </body>
+</html>
