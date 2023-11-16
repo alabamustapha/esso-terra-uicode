@@ -587,10 +587,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
 .mb-7 {
   margin-bottom: 1.75rem;
 }
@@ -682,6 +678,11 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .min-w-\[53rem\] {
@@ -1135,13 +1136,13 @@ ul {
 
 .btn-md {
   height: 2.8125rem;
-  width: 100%;
+  max-width: 100%;
   padding: 0.75rem;
 }
 
 .btn-lg {
   height: 3.3125rem;
-  width: 100%;
+  max-width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 1.25rem;

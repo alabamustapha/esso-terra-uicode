@@ -72,11 +72,11 @@ ul {
 }
 
 .btn-md {
-  @apply w-full h-[2.8125rem] p-3;
+  @apply max-w-full h-[2.8125rem] p-3;
 }
 
 .btn-lg {
-  @apply w-full h-[3.3125rem] px-4 py-5;
+  @apply max-w-full h-[3.3125rem] px-4 py-5;
 }
 
 .btn-primary {
