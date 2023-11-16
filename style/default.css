@@ -403,7 +403,7 @@ label {
 }
 
 .content__header {
-  @apply flex items-center max-h-[3.7rem];
+  @apply flex items-center min-h-[3.7rem];
 }
 
 .content__wrapper {

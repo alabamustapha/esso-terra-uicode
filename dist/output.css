@@ -1952,7 +1952,7 @@ label {
 
 .content__header {
   display: flex;
-  max-height: 3.7rem;
+  min-height: 3.7rem;
   align-items: center;
 }
 
