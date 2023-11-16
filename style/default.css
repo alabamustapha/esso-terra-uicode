@@ -185,11 +185,11 @@ label {
 }
 
 .tab__link {
-  @apply text-primary-300 text-xl font-medium after:content-['>'] after:ml-2 after:inline-block;
+  @apply text-grey-300 text-xl font-medium after:content-['>'] after:ml-2 after:inline-block;
 }
 
 .tab__link.active {
-  @apply text-primary-600 text-[2rem] leading-[3rem] font-semibold after:hidden;
+  @apply text-grey-400 text-[2rem] leading-[3rem] font-semibold after:hidden;
 }
 
 /* Card */
