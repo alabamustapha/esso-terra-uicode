@@ -61,8 +61,9 @@ ul {
   @apply text-sm leading-[1.5rem] font-medium;
 }
 
-.description {
-  @apply text-primary-400 text-sm pt-1;
+/* Utilities */
+.pending {
+  @apply text-pending-400;
 }
 
 /* Components */
@@ -83,7 +84,7 @@ ul {
 }
 
 .btn-primary--outline {
-  @apply bg-white border border-primary-600 text-primary-600 hover:bg-primary-100 active:border-2 disabled:bg-primary-100 disabled:border-primary-200 disabled:text-primary-200;
+  @apply bg-[transparent] border border-primary-600 text-primary-600 hover:bg-primary-100 active:border-2 disabled:bg-primary-100 disabled:border-primary-200 disabled:text-primary-200;
 }
 
 .btn-secondary {
@@ -95,6 +96,12 @@ form {
 }
 
 input,
+select,
+textarea {
+  @apply w-full text-grey-300 p-4 border border-grey-300 rounded outline-none placeholder:text-grey-300  focus:border-primary-500 focus:placeholder:text-grey-300;
+}
+
+input,
 select {
   @apply h-[3.3125rem];
 }
@@ -103,18 +110,12 @@ textarea {
   @apply resize-none;
 }
 
-input,
-select,
-textarea {
-  @apply w-full  text-primary-600 p-4 border border-primary-100 rounded outline-none placeholder:text-primary-300  focus:border-primary-500 focus:placeholder:text-primary-600 read-only:text-primary-500 read-only:bg-primary-100 read-only:border-primary-400;
-}
-
 input:-webkit-autofill {
   -webkit-text-fill-color: rgb(1 143 61) !important;
 }
 
 label {
-  @apply text-primary-500 text-xs font-normal cursor-pointer;
+  @apply text-grey-400 text-xs font-medium cursor-pointer;
 }
 
 .group_input_col {
@@ -123,6 +124,10 @@ label {
 
 .input-container {
   @apply flex flex-col gap-1;
+}
+
+.input-container--row {
+  @apply flex-row gap-4 items-center;
 }
 
 .input-with-icon {
@@ -213,11 +218,11 @@ label {
 }
 
 .card--sm {
-  @apply w-[14rem] h-[14rem];
+  @apply w-full md:w-[14rem] h-[14rem];
 }
 
 .card__detail {
-  @apply flex flex-col gap-1;
+  @apply flex flex-col gap-2;
 }
 
 .card__detail > .description {
@@ -238,7 +243,7 @@ label {
 }
 
 .folder__card {
-  @apply flex justify-between w-[21.4375rem] h-[7.5rem] py-4 pr-3 pl-6 bg-white rounded;
+  @apply flex justify-between w-full lg:w-[21.4375rem] h-[7.5rem];
 }
 
 .folder__content > p {
@@ -271,12 +276,8 @@ label {
   @apply flex;
 }
 
-.modal.active {
-  @apply flex;
-}
-
 .modal__content {
-  @apply relative w-full inline-flex flex-col items-center text-center bg-white max-w-[32.5rem] h-full min-h-[18.75rem] py-14 px-20 border rounded border-grey-400;
+  @apply relative w-full inline-flex flex-col items-center text-center text-grey-300 bg-white max-w-[32.5rem] h-full min-h-[18.75rem] py-14 px-20 border rounded border-grey-400;
 }
 
 /* Dashboard */
@@ -406,7 +407,7 @@ label {
 }
 
 .content__wrapper {
-  @apply mt-8 overflow-y-auto h-full;
+  @apply relative mt-8 overflow-y-auto h-full;
 }
 
 .action {
@@ -447,7 +448,7 @@ label {
 
 /* Company Info */
 .company__details {
-  @apply w-full max-w-[70rem];
+  @apply w-full;
 }
 .company__info {
   @apply flex flex-col gap-8;

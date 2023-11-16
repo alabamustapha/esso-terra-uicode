@@ -740,15 +740,14 @@
             <div class="company__details">
               <form action="">
                 <div class="flex gap-7 flex-wrap lg:flex-nowrap">
-                  <div class="group_input_col w-full lg:max-w-[21.4375rem]">
+                  <div class="group_input_col w-full lg:basis-2/5">
                     <div class="input-container">
                       <label for="company_name"> Company Name </label>
                       <input
                         type="text"
                         name="company_name"
                         id="company_name"
-                        value="Company Name"
-                        readonly
+                        placeholder="Company Name"
                       />
                     </div>
                     <div class="input-container">
@@ -757,8 +756,7 @@
                         type="text"
                         name="company_type"
                         id="company_type"
-                        value="Company Type"
-                        readonly
+                        placeholder="Company Type"
                       />
                     </div>
                     <div class="input-container">
@@ -776,14 +774,14 @@
                           >
                             <path
                               d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
-                              stroke="#2BA25D"
+                              stroke="#727272"
                               stroke-width="1.5"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
                             <path
                               d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
-                              stroke="#2BA25D"
+                              stroke="#727272"
                               stroke-width="1.5"
                               stroke-linecap="round"
                               stroke-linejoin="round"
@@ -794,8 +792,7 @@
                           type="text"
                           name="reg_number"
                           id="reg_number"
-                          value="00000"
-                          readonly
+                          placeholder="00000"
                         />
                       </div>
                     </div>
@@ -812,14 +809,14 @@
                           >
                             <path
                               d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
-                              stroke="#2BA25D"
+                              stroke="#727272"
                               stroke-width="1.5"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
                             <path
                               d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
-                              stroke="#2BA25D"
+                              stroke="#727272"
                               stroke-width="1.5"
                               stroke-linecap="round"
                               stroke-linejoin="round"
@@ -830,18 +827,20 @@
                           type="email"
                           name="company_email"
                           id="company_email"
-                          value="CompanyName@company.com"
-                          readonly
+                          placeholder="CompanyName@company.com"
                         />
                       </div>
                     </div>
                   </div>
-                  <div class="group_input_col w-full lg:max-w-[43.625rem]">
+                  <div class="group_input_col w-full lg:basis-3/5">
                     <div class="input-container">
                       <label for="company_desc"> Company Description </label>
-                      <textarea readonly class="scrollbar" rows="5">
-Company Description</textarea
-                      >
+                      <textarea
+                        class="scrollbar"
+                        name="company_desc"
+                        rows="5"
+                        placeholder="Company description"
+                      ></textarea>
                     </div>
                     <div class="input-container">
                       <label for="company_address"> Company Address </label>
@@ -856,14 +855,14 @@ Company Description</textarea
                           >
                             <path
                               d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
-                              stroke="#2BA25D"
+                              stroke="#727272"
                               stroke-width="1.5"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
                             <path
                               d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
-                              stroke="#2BA25D"
+                              stroke="#727272"
                               stroke-width="1.5"
                               stroke-linecap="round"
                               stroke-linejoin="round"
@@ -874,8 +873,7 @@ Company Description</textarea
                           type="text"
                           name="company_address"
                           id="company_address"
-                          value="Company Address"
-                          readonly
+                          placeholder="Company Address"
                         />
                       </div>
                     </div>
@@ -892,14 +890,14 @@ Company Description</textarea
                           >
                             <path
                               d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
-                              stroke="#2BA25D"
+                              stroke="#727272"
                               stroke-width="1.5"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
                             <path
                               d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
-                              stroke="#2BA25D"
+                              stroke="#727272"
                               stroke-width="1.5"
                               stroke-linecap="round"
                               stroke-linejoin="round"
@@ -910,8 +908,7 @@ Company Description</textarea
                           type="text"
                           name="company_phone"
                           id="company_phone"
-                          value="000-000-000"
-                          readonly
+                          placeholder="000-000-000"
                         />
                       </div>
                     </div>
@@ -927,8 +924,8 @@ Company Description</textarea
     <!-- logout modal -->
     <div id="logout" tabindex="-1" class="modal">
       <div class="modal__content">
-        <h4>Log Out?</h4>
-        <p class="description mb-4">Are you sure you ant to logout?</p>
+        <h4 class="text-grey-400">Log Out?</h4>
+        <p class="mb-4">Are you sure you ant to logout?</p>
 
         <div class="flex flex-col gap-2 w-full">
           <button class="btn btn-primary btn-lg">Yes</button>
@@ -954,8 +951,8 @@ Company Description</textarea
             />
           </svg>
         </i>
-        <h4>Success</h4>
-        <p class="description mb-4">Company logo successfully downloaded</p>
+        <h4 class="text-grey-400">Success</h4>
+        <p class="mb-4">Company logo successfully downloaded</p>
       </div>
     </div>
   </body>

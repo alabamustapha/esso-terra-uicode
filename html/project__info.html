@@ -695,24 +695,22 @@
             <div
               class="flex items-center justify-between gap-5 w-full flex-wrap lg:flex-nowrap"
             >
-              <div class="input-container basis-full lg:basis-[30%]">
+              <div class="input-container basis-full">
                 <label for="project_name"> Project Name </label>
                 <input
                   type="text"
                   name="project_name"
                   id="project_name"
-                  value="Project Name"
-                  readonly
+                  placeholder="Project Name"
                 />
               </div>
-              <div class="input-container basis-full lg:basis-[30%]">
+              <div class="input-container basis-full">
                 <label for="company"> Company </label>
                 <input
                   type="text"
                   name="company"
                   id="company"
-                  value="Company"
-                  readonly
+                  placeholder="Company"
                 />
               </div>
               <div class="flex items-center gap-5 flex-wrap sm:flex-nowrap">
@@ -723,7 +721,6 @@
                     name="project_begins"
                     id="project_begins"
                     value="2023-07-10"
-                    readonly
                   />
                 </div>
                 <div class="input-container basis-full">
@@ -733,16 +730,18 @@
                     name="project_ends"
                     id="project_ends"
                     value="2023-07-20"
-                    readonly
                   />
                 </div>
               </div>
             </div>
             <div class="input-container mt-7">
-              <label for="company_desc"> Project Description </label>
-              <textarea readonly class="scrollbar" rows="5">
-Project description goes in here</textarea
-              >
+              <label for="peoject_desc"> Project Description </label>
+              <textarea
+                class="scrollbar"
+                name="project_desc"
+                rows="5"
+                placeholder="Project description goes in here"
+              ></textarea>
             </div>
           </div>
         </div>
@@ -752,8 +751,8 @@ Project description goes in here</textarea
     <!-- logout modal -->
     <div id="logout" tabindex="-1" class="modal">
       <div class="modal__content">
-        <h4>Log Out?</h4>
-        <p class="description mb-4">Are you sure you ant to logout?</p>
+        <h4 class="text-grey-400">Log Out?</h4>
+        <p class="mb-4">Are you sure you ant to logout?</p>
 
         <div class="flex flex-col gap-2 w-full">
           <button class="btn btn-primary btn-lg">Yes</button>
