@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../../dist/output.css" />
+  </head>
+  <body class="bg-grey-100">
+    <!-- Pagination Container -->
+    <div
+      class="absolute bottom-3 left-0 inline-flex flex-wrap gap-1 justify-between items-center w-full"
+    >
+      <!-- Pagination -->
+      <ul class="isolate inline-flex gap-3 shadow-sm" aria-label="Pagination">
+        <a
+          href="#"
+          class="group relative inline-flex items-center justify-center bg-white text-grey-400 font-normal text-smpx-2 py-2 w-8 h-8 rounded hover:bg-primary-600 hover:text-white"
+        >
+          <span class="sr-only">Previous</span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="group-hover:stroke-white"
+              d="M9.99925 13.28L5.65258 8.9333C5.13924 8.41997 5.13924 7.57997 5.65258 7.06664L9.99925 2.71997"
+              stroke="#018F3D"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a
+          href="#"
+          class="relative inline-flex items-center justify-center bg-white text-grey-400 font-normal text-sm px-2 py-2 w-8 h-8 rounded hover:bg-primary-600 hover:text-white"
+        >
+          1
+        </a>
+        <a
+          href="#"
+          class="relative inline-flex items-center justify-center bg-white text-grey-400 font-normal text-smpx-2 py-2 w-8 h-8 rounded hover:bg-primary-600 hover:text-white"
+        >
+          2
+        </a>
+        <a
+          href="#"
+          class="relative inline-flex items-center justify-center bg-white text-grey-400 font-normal text-sm px-2 py-2 w-8 h-8 rounded hover:bg-primary-600 hover:text-white"
+        >
+          3
+        </a>
+        <span
+          class="relative inline-flex items-center justify-center bg-white text-grey-400 font-normal text-smpx-2 py-2 w-8 h-8 rounded hover:bg-primary-600 hover:text-white"
+        >
+          ...
+        </span>
+        <a
+          href="#"
+          class="relative inline-flex items-center justify-center bg-white text-grey-400 font-normal text-sm px-2 py-2 w-8 h-8 rounded hover:bg-primary-600 hover:text-white"
+        >
+          10
+        </a>
+        <a
+          href="#"
+          class="group relative inline-flex items-center justify-center bg-white text-grey-400 font-normal text-sm px-2 py-2 w-8 h-8 rounded hover:bg-primary-600 hover:text-white"
+        >
+          <span class="sr-only">Next</span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="group-hover:stroke-white"
+              d="M5.93945 13.28L10.2861 8.9333C10.7995 8.41997 10.7995 7.57997 10.2861 7.06664L5.93945 2.71997"
+              stroke="#018F3D"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </ul>
+    </div>
+  </body>
+</html>
