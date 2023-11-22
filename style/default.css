@@ -117,18 +117,3 @@ ul {
 .company__details {
   @apply w-full;
 }
-.company__info {
-  @apply flex flex-col gap-8;
-}
-
-.company__logo {
-  @apply flex gap-12 items-center;
-}
-
-.company__logo > .logo {
-  @apply w-[9.1875rem] h-[9.1875rem] rounded overflow-hidden;
-}
-
-.company__logo > .logo img {
-  @apply w-full h-full object-cover;
-}

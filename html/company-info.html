@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="../dist/output.css" />
   </head>
   <body>
-    <!-- Dashboard App [not for authentication screens]-->
     <div
       class="md:grid grid-cols-[21.5rem_1fr] gap-6 w-full h-screen p-5 bg-grey-100 overflow-hidden"
     >
@@ -168,7 +167,7 @@
               <ul
                 class="hidden group-[.active]:flex flex-col max-w-[13.5rem] w-full ml-auto text-primary-600"
               >
-                <li class="list-none px-5 py-2 group/sub">
+                <li class="list-none px-5 py-2 group/sub active">
                   <a href="" class="flex items-center justify-between">
                     <span>Company Name</span>
                     <i class="ml-auto">
@@ -703,9 +702,17 @@
               <li>
                 <a
                   href=""
-                  class="text-grey-400 text-[2rem] leading-[3rem] font-semibold after:hidden"
+                  class="text-grey-300 text-xl font-medium after:content-['>'] after:ml-2 after:inline-block"
                   data-target="company"
                   >Company</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-grey-400 text-[2rem] leading-[3rem] font-semibold after:hidden"
+                  data-target="company"
+                  >Company Info</a
                 >
               </li>
             </ul>
@@ -914,43 +921,284 @@
             </a>
           </div>
         </div>
-
         <!-- Content Wrapper -->
         <div class="relative mt-8 overflow-y-auto h-full scrollbar">
-          <!-- Card Wrapper -->
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:max-lg:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 overflow-y-auto"
-          >
-            <!-- Card -->
-            <div
-              class="rounded-lg p-6 bg-white text-grey-200 w-full md:max-w-[20.5rem] xl:max-w-full min-h-[12.5625rem]"
-            >
-              <img
-                src="../images/dashboard/company.png"
-                alt="company name"
-                class="h-16 w-16 object-cover"
-              />
-              <div class="flex flex-col gap-2 mt-3">
-                <h6 class="text-grey-400">Company Name</h6>
-                <p class="text-sm font-medium">Company Type</p>
-                <p class="text-xs font-normal">Company Registration Number</p>
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col md:flex-row gap-12 md:items-center">
+              <div class="w-[9.1875rem] h-[9.1875rem] rounded overflow-hidden">
+                <img
+                  src="../images/dashboard/company.png"
+                  alt="logo"
+                  class="w-full h-full object-cover"
+                />
               </div>
+              <button
+                class="inline-flex items-center justify-center gap-3 text-sm font-medium max-w-full h-[2.8125rem] p-3 w-fit bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 disabled:bg-primary-100 rounded transition-all disabled:opacity-40"
+              >
+                <svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 7.83325V11.8333L7.33333 10.4999"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.99935 11.8333L4.66602 10.5"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14.6673 7.16659V10.4999C14.6673 13.8333 13.334 15.1666 10.0007 15.1666H6.00065C2.66732 15.1666 1.33398 13.8333 1.33398 10.4999V6.49992C1.33398 3.16659 2.66732 1.83325 6.00065 1.83325H9.33398"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14.6673 7.16658H12.0007C10.0007 7.16658 9.33398 6.49992 9.33398 4.49992V1.83325L14.6673 7.16658Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <span>Download Company Logo</span>
+              </button>
             </div>
 
-            <!-- Card -->
-            <div
-              class="rounded-lg p-6 bg-white text-grey-200 w-full md:max-w-[20.5rem] xl:max-w-full min-h-[12.5625rem]"
-            >
-              <img
-                src="../images/dashboard/company.png"
-                alt="company name"
-                class="h-16 w-16 object-cover"
-              />
-              <div class="flex flex-col gap-2 mt-3">
-                <h6 class="text-grey-400">Company Name</h6>
-                <p class="text-sm font-medium">Company Type</p>
-                <p class="text-xs font-normal">Company Registration Number</p>
-              </div>
+            <!-- Company Info Form -->
+            <div class="w-full">
+              <form action="">
+                <div class="flex gap-7 flex-wrap lg:flex-nowrap">
+                  <div class="flex flex-col gap-y-6 w-full lg:basis-2/5">
+                    <div class="flex flex-col gap-1 group">
+                      <label
+                        for="company_name"
+                        class="text-grey-400 text-xs font-medium cursor-pointer group-[.invalid]:text-error-400"
+                      >
+                        Company Name
+                      </label>
+                      <input
+                        class="w-full text-grey-300 p-4 border border-grey-300 rounded outline-none placeholder:text-grey-300 focus:border-primary-500 focus:placeholder:text-grey-300 h-[3.3125rem]"
+                        name="company_name"
+                        id="company_name"
+                        placeholder="Company Name"
+                      />
+                    </div>
+
+                    <div class="flex flex-col gap-1 group">
+                      <label
+                        for="company_type"
+                        class="text-grey-400 text-xs font-medium cursor-pointer group-[.invalid]:text-error-400"
+                      >
+                        Company Type
+                      </label>
+                      <input
+                        class="w-full text-grey-300 p-4 border border-grey-300 rounded outline-none placeholder:text-grey-300 focus:border-primary-500 focus:placeholder:text-grey-300 h-[3.3125rem]"
+                        type="text"
+                        name="company_type"
+                        id="company_type"
+                        placeholder="Company Type"
+                      />
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                      <label
+                        for="reg_number"
+                        class="text-grey-400 text-xs font-medium cursor-pointer"
+                      >
+                        Company Registration Number
+                      </label>
+                      <div class="relative">
+                        <i class="absolute top-4 right-3 cursor-pointer">
+                          <svg
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
+                              stroke="#727272"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
+                              stroke="#727272"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </i>
+                        <input
+                          class="pr-9 w-full text-grey-300 p-4 border border-grey-300 rounded outline-none placeholder:text-grey-300 focus:border-primary-500 focus:placeholder:text-grey-300 h-[3.3125rem]"
+                          type="text"
+                          name="reg_number"
+                          id="reg_number"
+                          placeholder="00000"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                      <label
+                        for="company_email"
+                        class="text-grey-400 text-xs font-medium cursor-pointer"
+                      >
+                        Company Email
+                      </label>
+                      <div class="relative">
+                        <i class="absolute top-4 right-3 cursor-pointer">
+                          <svg
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
+                              stroke="#727272"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
+                              stroke="#727272"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </i>
+                        <input
+                          class="pr-9 w-full text-grey-300 p-4 border border-grey-300 rounded outline-none placeholder:text-grey-300 focus:border-primary-500 focus:placeholder:text-grey-300 h-[3.3125rem]"
+                          type="email"
+                          name="company_email"
+                          id="company_email"
+                          placeholder="CompanyName@company.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-y-6 w-full lg:basis-3/5">
+                    <div class="flex flex-col gap-1 group">
+                      <label
+                        for="company_desc"
+                        class="text-grey-400 text-xs font-medium cursor-pointer group-[.invalid]:text-error-400"
+                      >
+                        Company Description
+                      </label>
+                      <textarea
+                        class="w-full text-grey-300 p-4 border border-grey-300 rounded outline-none placeholder:text-grey-300 focus:border-primary-500 focus:placeholder:text-grey-300 scrollbar"
+                        name="company_desc"
+                        rows="5"
+                        placeholder="Company description"
+                      ></textarea>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                      <label
+                        for="company_address"
+                        class="text-grey-400 text-xs font-medium cursor-pointer"
+                      >
+                        Company Address
+                      </label>
+                      <div class="relative">
+                        <i class="absolute top-4 right-3 cursor-pointer">
+                          <svg
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
+                              stroke="#727272"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
+                              stroke="#727272"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </i>
+                        <input
+                          class="pr-9 w-full text-grey-300 p-4 border border-grey-300 rounded outline-none placeholder:text-grey-300 focus:border-primary-500 focus:placeholder:text-grey-300 h-[3.3125rem]"
+                          type="email"
+                          name="company_address"
+                          id="company_address"
+                          placeholder="Company Address"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                      <label
+                        for="company_phone"
+                        class="text-grey-400 text-xs font-medium cursor-pointer"
+                      >
+                        Company Phone
+                      </label>
+                      <div class="relative">
+                        <i class="absolute top-4 right-3 cursor-pointer">
+                          <svg
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.3327 11.2498V14.7498C13.3327 17.6665 12.166 18.8332 9.24935 18.8332H5.74935C2.83268 18.8332 1.66602 17.6665 1.66602 14.7498V11.2498C1.66602 8.33317 2.83268 7.1665 5.74935 7.1665H9.24935C12.166 7.1665 13.3327 8.33317 13.3327 11.2498Z"
+                              stroke="#727272"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M18.3327 6.24984V9.74984C18.3327 12.6665 17.166 13.8332 14.2494 13.8332H13.3327V11.2498C13.3327 8.33317 12.166 7.1665 9.24935 7.1665H6.66602V6.24984C6.66602 3.33317 7.83268 2.1665 10.7493 2.1665H14.2494C17.166 2.1665 18.3327 3.33317 18.3327 6.24984Z"
+                              stroke="#727272"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </i>
+                        <input
+                          class="pr-9 w-full text-grey-300 p-4 border border-grey-300 rounded outline-none placeholder:text-grey-300 focus:border-primary-500 focus:placeholder:text-grey-300 h-[3.3125rem]"
+                          type="text"
+                          name="company_phone"
+                          id="company_phone"
+                          placeholder="000-000-000"
+                          inputmode="numeric"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -981,6 +1229,34 @@
             No
           </button>
         </div>
+      </div>
+    </div>
+
+    <!-- Logo Download Sucess modal -->
+    <div
+      id="logout"
+      tabindex="-1"
+      class="hidden fixed top-0 left-0 right-0 z-50 flex-col justify-center items-center bg-grey-400/80 p-4 overflow-hidden min-h-screen backdrop-blur-sm"
+    >
+      <div
+        class="relative w-full inline-flex flex-col items-center justify-center text-center text-grey-300 bg-white max-w-[32.5rem] h-full min-h-[18.75rem] py-14 px-20 border rounded border-grey-400"
+      >
+        <i class="mb-4">
+          <svg
+            width="67"
+            height="68"
+            viewBox="0 0 67 68"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M47.467 0.666504H19.5337C7.40032 0.666504 0.166992 7.89984 0.166992 20.0332V47.9332C0.166992 60.0998 7.40032 67.3332 19.5337 67.3332H47.4337C59.567 67.3332 66.8003 60.0998 66.8003 47.9665V20.0332C66.8337 7.89984 59.6003 0.666504 47.467 0.666504ZM49.4337 26.3332L30.5337 45.2332C30.067 45.6998 29.4337 45.9665 28.767 45.9665C28.1003 45.9665 27.467 45.6998 27.0003 45.2332L17.567 35.7998C16.6003 34.8332 16.6003 33.2332 17.567 32.2665C18.5337 31.2998 20.1337 31.2998 21.1003 32.2665L28.767 39.9332L45.9003 22.7998C46.867 21.8332 48.467 21.8332 49.4337 22.7998C50.4003 23.7665 50.4003 25.3332 49.4337 26.3332Z"
+              fill="#269D40"
+            />
+          </svg>
+        </i>
+        <h4 class="text-grey-400">Success</h4>
+        <p class="mb-4">Company logo successfully downloaded</p>
       </div>
     </div>
   </body>
